@@ -1,24 +1,31 @@
+
+body{
+    position:fixed;
+}
 .parent {
     display: flex;
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 97vh;
+    width: 97vw;
     border: 2px solid red;
-    align-items: flex-start;
+    align-items: cebter;
     justify-content: flex-end;
     padding: 0px;
     flex-direction: column;
 
 }
-.display{
-    height: 10vh;
-    width:95vw;
-    margin-bottom: 20px;
- 
+.display1{
 
+    height: 10vh;
+    width:98%;
+    margin-bottom: 40px;
+    margin: solid rgb(1, 122, 17);
+    box-shadow: 2px 2px 5px rgba(223, 9, 9, 0.2);
+    font-size: 3rem;
+ 
 }
 .num {
-     padding-top: 20px;
+    height:50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,8 +34,9 @@
 }
 
 .flex-box {
-    width: 50px;
-    height: 50px;
+    height: 80%;
+    width: 80%;
+    border: 2px solid green;;
     border-radius: 10%;
     background-color:red;
     display: flex;
@@ -36,10 +44,34 @@
     align-items: center;
     margin: 5px;
     color: white;
-    font-size: 20px;
+    font-size: 3rem;
 }
 
 .row1, .row2, .row3, .row4 {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: darkred;
+}
+
+.head{
+   position:absolute;
+   font-size: 3rem;
+top:0;
+left: 10%;
+ text-align:center;
+ font-weight: bold;
 }
