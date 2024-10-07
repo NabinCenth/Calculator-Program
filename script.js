@@ -1,4 +1,5 @@
-let output = document.querySelector('.display1'); // Fixed spelling
+let display1 = document.querySelector('.display1');
+let display2 = document.querySelector('.display2'); // Fixed spelling
 const buttons = document.querySelectorAll('.flex-box');
 let lastbtn;
 let output1;
@@ -16,7 +17,8 @@ buttons.forEach(button => {
         lastbtn = buttonText;
 
         if (lastbtn == "C") {
-            output.value = "";
+            display1.value = "";
+            display2.value = "";
             arr = [];
             o = "";
             ocount = 0;
@@ -24,11 +26,16 @@ buttons.forEach(button => {
             a1=0;
             b1=0;
         } 
-        else if(lastbtn=="="){arr.forEach(num => {
-    if (num != "+" && num != "-" && num != "*" && num != "/" && ocount == 0) {
+        else if(lastbtn=="="){
+      if(ocount>1){
+        display1.value="Error ";
+         display2.value="press C";
+      }
+            arr.forEach(num => {
+    if (num != "+" && num != "-" && num != "*" && num != "/" && ocount == 0 && num !="=" && num !="C") {
         a1 = a1 * 10 + Number(num);
     } else if (num == "+" || num == "-" || num == "*" || num == "/") {
-        if (ocount === 0) {
+        if (ocount == 0) {
             o = num;
             ocount++;
         } else {
@@ -53,17 +60,18 @@ else if (o == "-") {
 
 console.log("a1: ", a1, " b1: ", b1, " operator: ", o);
 
-    output.value=output1;
+    display2.value=output1;
     arr=[];
     o="";
     ocount=0;
     output1=0;
-    a1=0;
+    a1=Number( display2.value);
     b1=0;
 
  }
             else {
-            output.value += lastbtn;
+
+            display1.value += lastbtn;
             arr.push(lastbtn);
         }
     });

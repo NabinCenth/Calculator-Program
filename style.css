@@ -1,36 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 
 body{
     position:fixed;
+ background-color: #020202;
 }
+
 .parent {
     display: flex;
     position: absolute;
     height: 97vh;
     width: 97vw;
-    border: 2px solid red;
+   
     align-items: cebter;
     justify-content: flex-end;
     padding: 0px;
     flex-direction: column;
 
 }
-.display1{
-
-    height: 10vh;
-    width:98%;
-    margin-bottom: 40px;
-    margin: solid rgb(1, 122, 17);
-    box-shadow: 2px 2px 5px rgba(223, 9, 9, 0.2);
-    font-size: 3rem;
- 
+h1 {
+  color: white;
 }
+
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+/* Display Styles */
+.display {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+    width: 100%;
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.747);
+    position: relative; /* Position relative for absolute positioning of neon effect */
+  }
+  
+  /* Neon Border Effect */
+  .display::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjust the position to create a border effect */
+    left: -5px; /* Adjust the position to create a border effect */
+    right: -5px; /* Adjust the position to create a border effect */
+    bottom: -5px; /* Adjust the position to create a border effect */
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    filter: blur(15px); /* Adjust blur for neon effect */
+    z-index: -1; /* Place behind the display */
+    animation: 3s spin linear infinite; /* Spin animation */
+    border-radius: 15px; /* Match the border radius of the display */
+  }
+  
+  .display1 {
+    height: 50%;
+    border: none; /* Remove this if not needed, or set a specific style */
+    font-size: 2.5rem;
+
+    
+  }
+  
+  .display2 {
+    height: 50%;
+    border: none; /* No border here */
+    font-size: 2.5rem;
+    text-align: right;
+  }
+  
 .num {
     height:50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
+
 }
 
 .flex-box {
@@ -66,12 +148,48 @@ button {
 button:active {
     background-color: darkred;
 }
-
-.head{
-   position:absolute;
-   font-size: 3rem;
-top:0;
-left: 10%;
- text-align:center;
- font-weight: bold;
-}
+.head1 {
+    position: absolute;
+    top: -1%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+}.head1 p {
+    font-size: 3rem; /* You can adjust the size as needed */
+    line-height: 1.2;
+    text-shadow: 
+      0 0 5px #ffa500, 
+      0 0 15px #ffa500, 
+      0 0 20px #ffa500, 
+      0 0 40px #ffa500, 
+      0 0 60px #ff0000, 
+      0 0 10px #ff8d00, 
+      0 0 98px #ff0000;
+    color: #fff6a9;
+    font-family: 'Paytone One', cursive; /* Cursive neon-style font */
+    text-align: center;
+    margin: 0; /* Remove default margin of <p> */
+    animation: blink 6s ease-in-out infinite; /* Adjusted duration and timing function */
+    -webkit-animation: blink 6s ease-in-out infinite; /* Ensuring compatibility */
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      text-shadow: 
+        0 0 5px #ffa500, 
+        0 0 15px #fff700e2, 
+        0 0 20px #ffa500, 
+        0 0 40px #ffa500, 
+        0 0 60px #3cff00, 
+        0 0 10px #ff8d00, 
+        0 0 98px #09c781;
+      color: #fff6a9;
+    }
+    40%, 60% {
+     /* Remove shadow for a clearer fade-out */
+      color: #b7ff00; /* Darker color for better contrast when fading */
+    }
+  }
+  
