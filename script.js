@@ -9,6 +9,14 @@ let i=0;
 let arr=[];
 let a1 = 0;
 let b1 = 0;
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('touchstart', () => {
+        button.classList.add('active');
+    });
+    button.addEventListener('touchend', () => {
+        button.classList.remove('active');
+    });
+});
 
 buttons.forEach(button => {
     button.addEventListener('click', (event) => {
