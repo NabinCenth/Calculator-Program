@@ -95,7 +95,7 @@ h1 {
   .display1 {
     height: 50%;
     border: none; /* Remove this if not needed, or set a specific style */
-    font-size: 2.5rem;
+    font-size:3rem;
     font-weight: bold;
     color: #ffffff;
  font-family: Orbitron;
@@ -105,7 +105,7 @@ h1 {
   .display2 {
     height: 50%;
     border: none; /* No border here */
-    font-size: 2.5rem;
+    font-size:3rem;
     text-align: right;
     font-weight: bold;
     color: #ffffff;
@@ -131,7 +131,7 @@ h1 {
     font-weight: bold;
     width: 800%;
 }.head1 p {
-    font-size: 3rem; /* You can adjust the size as needed */
+    font-size: 5rem; /* You can adjust the size as needed */
     line-height: 1.2;
     text-shadow: 
       0 0 5px #ffa500, 
@@ -256,8 +256,15 @@ button:after {
     align-items: center;
     margin: 5px;
     color: white;
-    font-size: 3rem;
+    font-size: 5rem;
+    font-family: orbitron;
 }
 .clear {
 background-color: #3652D9;
+}
+.add ,.divide,.multiply,.subtract{
+  background-color: #f17c57;
+}
+.equals{
+  background-color: #66FF99;
 }

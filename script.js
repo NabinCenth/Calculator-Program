@@ -38,6 +38,7 @@ buttons.forEach(button => {
       if(ocount>1){
         display1.value="Error ";
          display2.value="press C";
+         
       }
             arr.forEach(num => {
     if (num != "+" && num != "-" && num != "*" && num != "/" && ocount == 0 && num !="=" && num !="C") {
