@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 body{
-    position:fixed;
  background-color: #fcfcfc;
 }
 
@@ -75,6 +74,7 @@ h1 {
     font-size: 3rem;
     background-color: rgba(0, 0, 0, 0.747);
     position: relative; /* Position relative for absolute positioning of neon effect */
+    overflow: hidden;
   }
   
   /* Neon Border Effect */
